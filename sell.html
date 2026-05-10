@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продать авто | AutoPrime</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="adaptation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo"><i class="fas fa-car"></i> AutoPrime</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="aboutUs.html">О нас</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                    <li><a href="sell.html" class="active" style="color:#FBBF24;">Продать авто</a></li>
+                </ul>
+                <div class="contact-phone"><i class="fas fa-phone-alt"></i> +7 (495) 888-22-33</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="sell-hero">
+            <div class="container">
+                <h1>Продайте свой автомобиль</h1>
+                <p>Заполните форму — наши эксперты свяжутся с вами и помогут с размещением</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="sell-form-container">
+                <form id="sellCarForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Марка <span style="color:#EF4444;">*</span></label>
+                            <input type="text" id="brand" placeholder="Например: Toyota" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Модель <span style="color:#EF4444;">*</span></label>
+                            <input type="text" id="model" placeholder="Например: Camry" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Год выпуска <span style="color:#EF4444;">*</span></label>
+                            <input type="number" id="year" placeholder="2020" min="1950" max="2026" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Цена (₽) <span style="color:#EF4444;">*</span></label>
+                            <input type="number" id="price" placeholder="1 500 000" step="1000" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Пробег (км)</label>
+                            <input type="number" id="mileage" placeholder="45000">
+                        </div>
+                        <div class="form-group">
+                            <label>Топливо</label>
+                            <select id="fuel">
+                                <option value="Бензин">Бензин</option>
+                                <option value="Дизель">Дизель</option>
+                                <option value="Электро">Электро</option>
+                                <option value="Гибрид">Гибрид</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Тип кузова</label>
+                            <select id="body">
+                                <option value="Седан">Седан</option>
+                                <option value="Внедорожник">Внедорожник</option>
+                                <option value="Кроссовер">Кроссовер</option>
+                                <option value="Хэтчбек">Хэтчбек</option>
+                                <option value="Универсал">Универсал</option>
+                                <option value="Купе">Купе</option>
+                                <option value="Кабриолет">Кабриолет</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Коробка передач</label>
+                            <select id="transmission">
+                                <option value="Механика">Механика</option>
+                                <option value="Автомат">Автомат</option>
+                                <option value="Робот">Робот</option>
+                                <option value="Вариатор">Вариатор</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Фотография автомобиля</label>
+                        <input type="file" id="carPhoto" accept="image/*">
+                        <div class="photo-preview" id="photoPreview"></div>
+                        <p class="note">Загрузите фото (до 5 МБ). Предпросмотр появится ниже.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Описание (состояние, доп. оборудование)</label>
+                        <textarea id="description" rows="4" placeholder="Опишите особенности, историю обслуживания, битые/не битые и т.д."></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Ваше имя <span style="color:#EF4444;">*</span></label>
+                            <input type="text" id="sellerName" placeholder="Иван Петров" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Телефон <span style="color:#EF4444;">*</span></label>
+                            <input type="tel" id="sellerPhone" placeholder="+7 999 123-45-67" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Отправить заявку</button>
+                    <p class="note">Наш менеджер свяжется с вами в течение 24 часов для подтверждения данных и бесплатной оценки.</p>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-flex">
+                <div>© 2026 AutoPrime — все права защищены</div>
+                <div><i class="fab fa-instagram"></i> <i class="fab fa-telegram"></i> <i class="fab fa-vk"></i></div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
