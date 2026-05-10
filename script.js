@@ -330,3 +330,52 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+// ==================== СВОРАЧИВАНИЕ HEADER НА ТЕЛЕФОНАХ ====================
+(function() {
+    const header = document.querySelector('.header');
+    if (!header) return;
+    
+    let lastScrollTop = 0;
+    let ticking = false;
+    
+    function handleScroll() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const isMobile = window.innerWidth <= 768;
+        
+        if (!isMobile) {
+            // На десктопе не трогаем
+            header.classList.remove('header-hidden');
+            lastScrollTop = scrollTop;
+            ticking = false;
+            return;
+        }
+        
+        // Если прокрутили вниз больше чем на 10px
+        if (scrollTop > lastScrollTop && scrollTop > 50) {
+            header.classList.add('header-hidden');
+        } 
+        // Если прокрутили вверх
+        else if (scrollTop < lastScrollTop) {
+            header.classList.remove('header-hidden');
+        }
+        
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        ticking = false;
+    }
+    
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            requestAnimationFrame(handleScroll);
+            ticking = true;
+        }
+    });
+    
+    // При ресайзе окна сбросить состояние
+    window.addEventListener('resize', function() {
+        const isMobile = window.innerWidth <= 768;
+        if (!isMobile) {
+            header.classList.remove('header-hidden');
+        }
+        lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    });
+})();
