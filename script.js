@@ -1,7 +1,7 @@
 // ==================== ДАННЫЕ АВТОМОБИЛЕЙ ====================
 // Добавьте свои картинки: укажите путь к файлу или URL в поле imageUrl
 const carsData = [
-    { id: 1, brand: "BMW", model: "X5", year: 2021, price: 5500000, mileage: 42000, fuel: "Дизель", body: "Внедорожник", imageIcon: "fa-car-side", description: "Полный привод, M пакет, панорамная крыша.", imageUrl: "images/BMW-X5.jpg" },
+    { id: 1, brand: "BMW", model: "X5", year: 2021, price: 5500000, mileage: 42000, fuel: "Дизель", body: "Внедорожник", imageIcon: "fa-car-side", description: "Полный привод, M пакет, панорамная крыша.", imageUrl: "images/bmw-x5.jpg" },
     { id: 2, brand: "Mercedes-Benz", model: "E 220 d", year: 2020, price: 4800000, mileage: 51000, fuel: "Дизель", body: "Седан", imageIcon: "fa-car", description: "Адаптивный круиз, кожа, подогрев всех сидений.", imageUrl: "images/Mercedes-Benz-E-220-d.webp" },
     { id: 3, brand: "Audi", model: "Q7", year: 2019, price: 4900000, mileage: 68000, fuel: "Бензин", body: "Внедорожник", imageIcon: "fa-truck", description: "Quattro, 3 ряда сидений, престиж.", imageUrl: "images/Audi-Q7.webp" },
     { id: 4, brand: "Toyota", model: "Camry", year: 2022, price: 3800000, mileage: 22000, fuel: "Бензин", body: "Седан", imageIcon: "fa-car", description: "V6, JBL аудиосистема, безопасность.", imageUrl: "images/Toyota-Camry.jpg" },
