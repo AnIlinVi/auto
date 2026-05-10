@@ -83,7 +83,7 @@ const carsData = [
     { id: 79, brand: "ЗАЗ", model: "968М (Запорожец)", year: 1985, price: 150000, mileage: 95000, fuel: "Бензин", body: "Хэтчбек", imageIcon: "fa-car", description: "'Горбатый' с воздушным охлаждением. Уникальный стиль.", imageUrl: "images/ЗАЗ 968М (Запорожец).webp" },
     { id: 80, brand: "ЛуАЗ", model: "969 (Волынь)", year: 1985, price: 350000, mileage: 78000, fuel: "Бензин", body: "Внедорожник", imageIcon: "fa-car", description: "Легкий вездеход-амфибия (не полностью). Полный привод, воздушное охлаждение.", imageUrl: "images/ЛуАЗ 969 (Волынь).webp" },
     { id: 81, brand: "ГАЗ", model: "24 (Волга)", year: 1980, price: 500000, mileage: 88000, fuel: "Бензин", body: "Седан", imageIcon: "fa-car", description: "Знаменитая 'Волга' – символ советского автопрома. Просторный салон, скоростной.", imageUrl: "images/ГАЗ 24 (Волга).webp" },
-   
+
     { id: 82, brand: "Renault", model: "Logan I (Рестайлинг)", year: 2012, price: 380000, mileage: 245000, fuel: "Бензин", body: "Седан", imageIcon: "fa-car", description: "Надёжный 'рабочий конь'. 1.4 л, 75 л.с., огромный багажник, дешёвое обслуживание.", imageUrl: "images/Renault Logan.webp" },
     { id: 83, brand: "Nissan", model: "Almera III (G15)", year: 2013, price: 700000, mileage: 144000, fuel: "Бензин", body: "Седан", imageIcon: "fa-car", description: "Просторный салон, багажник 500 л. 1.6 л, 102 л.с., автомат или механика.", imageUrl: "images/Nissan Almera III (G15), 2013.webp" },
     { id: 84, brand: "Hyundai", model: "Accent (2G) 1.5", year: 2005, price: 280000, mileage: 168000, fuel: "Бензин", body: "Седан", imageIcon: "fa-car", description: "Корейский седан с надёжным мотором 1.5 л (90 л.с.). Неприхотлив, дёшев в ремонте.", imageUrl: "images/Hyundai Accent (2G) 1.5.jpg" },
@@ -259,4 +259,74 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     // Форма контактов
     initContactForm();
+    
+    // Предпросмотр загруженного фото
+    const photoInput = document.getElementById('carPhoto');
+    const previewDiv = document.getElementById('photoPreview');
+
+    photoInput.addEventListener('change', function (event) {
+        previewDiv.innerHTML = '';
+        const file = event.target.files[0];
+        if (file && file.type.startsWith('image/')) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                img.classList.add('preview-img');
+                previewDiv.appendChild(img);
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    // Обработка отправки формы
+    const form = document.getElementById('sellCarForm');
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Собираем данные
+        const brand = document.getElementById('brand').value.trim();
+        const model = document.getElementById('model').value.trim();
+        const year = document.getElementById('year').value;
+        const price = parseInt(document.getElementById('price').value);
+        const mileage = document.getElementById('mileage').value;
+        const fuel = document.getElementById('fuel').value;
+        const body = document.getElementById('body').value;
+        const transmission = document.getElementById('transmission').value;
+        const description = document.getElementById('description').value;
+        const sellerName = document.getElementById('sellerName').value.trim();
+        const sellerPhone = document.getElementById('sellerPhone').value.trim();
+
+        // Простая валидация
+        if (!brand || !model || !year || !price || !sellerName || !sellerPhone) {
+            alert('Пожалуйста, заполните все обязательные поля (марка, модель, год, цена, имя, телефон).');
+            return;
+        }
+
+        // Формируем сообщение
+        let message = `✅ Новая заявка на продажу автомобиля!\n\n`;
+        message += `Автомобиль: ${brand} ${model}\n`;
+        message += `Год: ${year}\n`;
+        message += `Цена: ${price.toLocaleString()} ₽\n`;
+        if (mileage) message += `Пробег: ${parseInt(mileage).toLocaleString()} км\n`;
+        message += `Топливо: ${fuel}\n`;
+        message += `Кузов: ${body}\n`;
+        message += `КПП: ${transmission}\n`;
+        if (description) message += `Описание: ${description}\n`;
+        message += `\nПродавец: ${sellerName}\n`;
+        message += `Телефон: ${sellerPhone}\n`;
+
+        // Проверка наличия фото (не отправляем файл, только уведомление)
+        const hasPhoto = photoInput.files.length > 0;
+        if (hasPhoto) {
+            message += `\nФото: загружено (предпросмотр в форме)`;
+        } else {
+            message += `\nФото: не загружено`;
+        }
+
+        alert(message + '\n\nДанные отправлены! Менеджер свяжется с вами в ближайшее время.');
+        form.reset();
+        previewDiv.innerHTML = '';
+    });
+
 });
