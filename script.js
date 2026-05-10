@@ -1,7 +1,7 @@
 // ==================== ДАННЫЕ АВТОМОБИЛЕЙ ====================
 // Добавьте свои картинки: укажите путь к файлу или URL в поле imageUrl
 const carsData = [
-    { id: 1, brand: "BMW", model: "X5", year: 2021, price: 5500000, mileage: 42000, fuel: "Дизель", body: "Внедорожник", imageIcon: "fa-car-side", description: "Полный привод, M пакет, панорамная крыша.", imageUrl: "images/bmw-x5.jpg" },
+    { id: 1, brand: "BMW", model: "X5", year: 2021, price: 5500000, mileage: 42000, fuel: "Дизель", body: "Внедорожник", imageIcon: "fa-car-side", description: "Полный привод, M пакет, панорамная крыша.", imageUrl: "images/bmw-x5.webp" },
     { id: 2, brand: "Mercedes-Benz", model: "E 220 d", year: 2020, price: 4800000, mileage: 51000, fuel: "Дизель", body: "Седан", imageIcon: "fa-car", description: "Адаптивный круиз, кожа, подогрев всех сидений.", imageUrl: "images/Mercedes-Benz-E-220-d.webp" },
     { id: 3, brand: "Audi", model: "Q7", year: 2019, price: 4900000, mileage: 68000, fuel: "Бензин", body: "Внедорожник", imageIcon: "fa-truck", description: "Quattro, 3 ряда сидений, престиж.", imageUrl: "images/Audi-Q7.webp" },
     { id: 4, brand: "Toyota", model: "Camry", year: 2022, price: 3800000, mileage: 22000, fuel: "Бензин", body: "Седан", imageIcon: "fa-car", description: "V6, JBL аудиосистема, безопасность.", imageUrl: "images/Toyota-Camry.jpg" },
@@ -9,7 +9,7 @@ const carsData = [
     { id: 6, brand: "Kia", model: "K5", year: 2022, price: 2800000, mileage: 18000, fuel: "Бензин", body: "Седан", imageIcon: "fa-car", description: "Стильный дизайн, 180 л.с.", imageUrl: "images/kia-k5.jpg" },
     { id: 7, brand: "BMW", model: "3 series", year: 2020, price: 3700000, mileage: 47000, fuel: "Бензин", body: "Седан", imageIcon: "fa-car", description: "M Sport, шумоизоляция.", imageUrl: "images/BMW-3-series.jpg" },
     { id: 8, brand: "Mercedes-Benz", model: "GLE", year: 2022, price: 7800000, mileage: 15000, fuel: "Бензин", body: "Внедорожник", imageIcon: "fa-car-side", description: "AMG пакет, неоновая подсветка.", imageUrl: "images/Mercedes-Benz-GLE.webp" },
-    { id: 9, brand: "Audi", model: "A6", year: 2021, price: 5200000, mileage: 29000, fuel: "Бензин", body: "Седан", imageIcon: "fa-car", description: "Quattro, виртуальная кабина.", imageUrl: "images/Audi-A6.webp" },
+    { id: 9, brand: "Audi", model: "A6", year: 2021, price: 5200000, mileage: 29000, fuel: "Бензин", body: "Седан",                                 imageIcon: "fa-car", description: "Quattro, виртуальная кабина.", imageUrl: "images/Audi-A6.webp" },
     { id: 10, brand: "Porsche", model: "Cayenne", year: 2019, price: 7500000, mileage: 63000, fuel: "Бензин", body: "Внедорожник", imageIcon: "fa-car-side", description: "Adaptive air suspension, sport chrono.", imageUrl: "images/Porsche-Cayenne.webp" },
     { id: 11, brand: "Volvo", model: "XC60", year: 2021, price: 4400000, mileage: 24000, fuel: "Дизель", body: "Кроссовер", imageIcon: "fa-truck", description: "City Safety, подогрев руля.", imageUrl: "images/Volvo-XC60.jpg" },
     { id: 12, brand: "Lexus", model: "RX 350", year: 2020, price: 5700000, mileage: 38000, fuel: "Бензин", body: "Кроссовер", imageIcon: "fa-car", description: "Mark Levinson, вентиляция сидений.", imageUrl: "images/Lexus-RX-350.webp" }
