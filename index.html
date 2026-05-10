@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoPrime | Продажа авто с пробегом</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="adaptation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo"><i class="fas fa-car"></i> AutoPrime</div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="aboutUs.html">О нас</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+                <div class="contact-phone"><i class="fas fa-phone-alt"></i> +7 (495) 888-22-33</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="hero">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <h1>Автомобили с пробегом <br>с гарантией до 2 лет</h1>
+                        <p>Более 500 проверенных авто в наличии. Полная юридическая чистота, техосмотр, помощь в
+                            кредите.</p>
+                        <div>
+                            <a href="catalog.html" class="btn-primary">Перейти в каталог</a>
+                            <a href="contact.html" class="btn-outline">Записаться на тест-драйв</a>
+                        </div>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h3>500+</h3><span>автомобилей</span>
+                        </div>
+                        <div class="stat-item">
+                            <h3>98%</h3><span>довольных клиентов</span>
+                        </div>
+                        <div class="stat-item">
+                            <h3>7 дней</h3><span>возврат без вопросов</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-title">⭐ Рекомендуемые модели</div>
+            <div id="featured-cars" class="cars-grid"></div>
+            <div style="text-align: center; margin: 20px 0 40px;">
+                <a href="catalog.html" class="btn-primary">Смотреть все авто →</a>
+            </div>
+
+            <div class="section-title">Почему выбирают нас</div>
+            <div class="advantages-grid">
+                <div class="advantage-card"><i class="fas fa-clipboard-list feature-icon"></i>
+                    <h3>Полная проверка</h3>
+                    <p>Автотехэкспертиза, история по VIN.</p>
+                </div>
+                <div class="advantage-card"><i class="fas fa-hand-holding-usd feature-icon"></i>
+                    <h3>Кредит и trade-in</h3>
+                    <p>Одобрение 95%, ставки от 4%.</p>
+                </div>
+                <div class="advantage-card"><i class="fas fa-tools feature-icon"></i>
+                    <h3>Сервисное обслуживание</h3>
+                    <p>Год бесплатного ТО при покупке.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-flex">
+                <div>© 2026 AutoPrime — все права защищены</div>
+                <div><a href="http://vk.com" target="_blank"><i class="fab fa-instagram"></i></a> <a
+                        href="https://vk.com" target="_blank"><i class="fab fa-telegram"></i></a> <a
+                        href="http://vk.com" target="_blank"><i class="fab fa-vk"></i></a></div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="car-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body"></div>
+            <button id="modal-testdrive" class="btn-primary">Записаться на тест-драйв</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

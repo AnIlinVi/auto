@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог авто | AutoPrime</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="adaptation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo"><i class="fas fa-car"></i> AutoPrime</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html" class="active">Каталог</a></li>
+                    <li><a href="aboutUs.html">О нас</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+                <div class="contact-phone"><i class="fas fa-phone-alt"></i> +7 (495) 888-22-33</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="section-title">🚗 Наш автопарк</div>
+            
+            <div class="filters-bar">
+                <div class="filter-group">
+                    <label>Марка</label>
+                    <select id="brand-filter">
+                        <option value="all">Все марки</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Цена от – до (₽)</label>
+                    <div class="price-range">
+                        <input type="number" id="price-min" placeholder="от 500 000">
+                        <input type="number" id="price-max" placeholder="до 10 млн">
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label>Поиск</label>
+                    <input type="text" id="search-input" placeholder="Модель или марка">
+                </div>
+                <button id="apply-filters" class="btn-filter">Применить</button>
+            </div>
+
+            <div class="sort-bar">
+                <span>Сортировать:</span>
+                <select id="sort-select">
+                    <option value="price-asc">Цена по возрастанию</option>
+                    <option value="price-desc">Цена по убыванию</option>
+                    <option value="year-desc">Новинки сначала</option>
+                </select>
+            </div>
+            
+            <div id="cars-count" class="cars-count"></div>
+            <div id="catalog-cars-list" class="cars-grid"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-flex">
+                <div>© 2026 AutoPrime — все права защищены</div>
+                <div><a href="http://vk.com" target="_blank"><i class="fab fa-instagram"></i></a> <a
+                        href="https://vk.com" target="_blank"><i class="fab fa-telegram"></i></a> <a
+                        href="http://vk.com" target="_blank"><i class="fab fa-vk"></i></a></div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="car-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body"></div>
+            <button id="modal-testdrive" class="btn-primary">Записаться на тест-драйв</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

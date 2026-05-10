@@ -1,0 +1,104 @@
+/* Tablet */
+@media (max-width: 900px) {
+    .hero-content h1 {
+        font-size: 38px;
+    }
+    
+    .hero-stats {
+        justify-content: center;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 680px) {
+    .container {
+        padding: 0 16px;
+    }
+    
+    .hero {
+        padding: 40px 0 60px;
+    }
+    
+    .hero-content h1 {
+        font-size: 28px;
+    }
+    
+    .hero-content p {
+        font-size: 16px;
+    }
+    
+    .btn-primary, .btn-outline {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .btn-outline {
+        margin-left: 8px;
+    }
+    
+    .section-title {
+        font-size: 26px;
+    }
+    
+    .cars-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .filters-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-group {
+        width: 100%;
+    }
+    
+    .price-range {
+        flex-direction: column;
+    }
+    
+    .sort-bar {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    
+    .about-grid {
+        flex-direction: column;
+    }
+    
+    .team-card {
+        width: 100%;
+    }
+    
+    .contact-grid {
+        flex-direction: column;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 16px;
+    }
+    
+    .stat-item h3 {
+        font-size: 28px;
+    }
+    
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+}
