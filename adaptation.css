@@ -44,7 +44,12 @@
     }
     
     .btn-outline {
-        margin-left: 8px;
+        margin-right: 10px;
+    }
+    
+    .btns {
+        display: grid;
+        row-gap: 1rem;
     }
     
     .section-title {
