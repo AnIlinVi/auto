@@ -529,3 +529,8 @@ footer {
     transform: translateY(-100%);
     box-shadow: none;
 }
+
+a, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
