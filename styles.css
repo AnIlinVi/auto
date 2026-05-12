@@ -378,6 +378,7 @@ textarea {
 .contact-form-block,
 .contact-info-block {
     flex: 1;
+    margin-bottom: 80px;
 }
 
 .contact-form {
